@@ -145,7 +145,8 @@
   /* Idle State of the stars */
   .rating-stars ul > li.star > i.fa {
     font-size:1.5em; /* Change the size of the stars */
-    color:#ccc; /* Color on idle state */
+    color:rgba(179, 201, 192, 0.829); /* Color on idle state */
+    cursor: pointer;
   }
   
   /* Hover state of the stars */
@@ -157,4 +158,5 @@
   .rating-stars ul > li.star.selected > i.fa {
     color:rgb(255, 223, 44);
   }
+
   
