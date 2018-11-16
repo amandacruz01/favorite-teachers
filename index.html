@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Favorite Teachers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Luckiest+Guy" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/lightbox.min.css" rel="stylesheet">
     <script id="teacher-template" type="text/x-handlebars-template">
         <li class="teacher" data-id="{{teacher_id}}" data-subjects="{{subjects}}">
+            <a href="images/{{image}}" data-lightbox="teacher-image" data-name="{{name}}">
             <img src="images/{{image}}" alt="{{name}}">
-            <h4>{{name}}</h4>
+            </a>
+            <h3>{{name}}</h3>
+
+                <section>
+                <div class='rating-stars text-center'>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+            </section>
         </li>
     </script>
-
 </head>
 <body>
     <div id="container">
@@ -44,6 +68,9 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/handlebars-v4.0.12.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/stars.js"></script>
+    <script src="js/easter-egg.js"></script>
     <script src="js/teachers.js"></script> 
     <script src="js/teacher-constructor.js"></script>
     <script src="js/subject-filter.js"></script>
